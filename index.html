@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>FMC Affiliate Application — design sample</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#1C1826;--bg2:#262131;--card:#2E2842;--field:#221d2f;--ink:#fff;--muted:#C3CBD9;--dim:#8892A6;--blue:#3B9DFF;--spark:#F59148;--rule:rgba(255,255,255,.13)}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:'Plus Jakarta Sans',system-ui,sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased;padding-bottom:80px}
+  .note-bar{background:rgba(59,157,255,.1);border-bottom:1px solid rgba(59,157,255,.3);text-align:center;font-size:13px;color:#9fc6f5;padding:10px 16px;font-family:'JetBrains Mono',monospace;letter-spacing:.02em}
+  .hero{background:radial-gradient(ellipse 70% 60% at 25% 15%,rgba(59,157,255,.16),transparent 60%),linear-gradient(168deg,#2A2440,#1B1728 60%,#141019);padding:60px 0 44px;border-bottom:1px solid var(--rule)}
+  .wrap{max-width:760px;margin:0 auto;padding:0 28px}
+  .kick{font-family:'JetBrains Mono',monospace;font-size:12.5px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--spark);display:inline-flex;align-items:center;gap:11px;margin-bottom:18px}
+  .kick .dot{width:7px;height:7px;border-radius:50%;background:var(--spark)}
+  h1{font-size:clamp(32px,4.6vw,46px);font-weight:700;letter-spacing:-.03em;line-height:1.05;margin-bottom:16px}
+  h1 em{font-style:normal;color:var(--blue)}
+  .lede{font-size:18px;color:var(--muted);max-width:560px}
+  form{padding-top:44px}
+  .grp{margin-bottom:26px}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  @media(max-width:560px){.row{grid-template-columns:1fr}}
+  label{display:block;font-size:14px;font-weight:600;margin-bottom:8px;color:#eef2fa}
+  label .req{color:var(--blue)}
+  label .hint{font-weight:400;color:var(--dim);font-size:13px}
+  input[type=text],input[type=url],input[type=email],textarea{width:100%;background:var(--field);border:1px solid var(--rule);border-radius:11px;padding:13px 15px;color:var(--ink);font-family:inherit;font-size:15.5px;transition:border-color .15s,box-shadow .15s}
+  input::placeholder,textarea::placeholder{color:#6c7488}
+  input:focus,textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(59,157,255,.18)}
+  textarea{resize:vertical;min-height:90px}
+  .chips{display:flex;flex-wrap:wrap;gap:10px}
+  .chip{display:inline-flex;align-items:center;gap:9px;background:var(--field);border:1px solid var(--rule);border-radius:999px;padding:9px 16px;font-size:14px;color:var(--muted);cursor:pointer;transition:all .15s;user-select:none}
+  .chip input{accent-color:var(--blue);width:15px;height:15px}
+  .chip:hover{border-color:rgba(59,157,255,.5);color:#fff}
+  .sub-note{font-size:12.5px;color:var(--dim);margin-top:7px;font-style:italic}
+  .divider{height:1px;background:var(--rule);margin:34px 0}
+  .sec-label{font-family:'JetBrains Mono',monospace;font-size:11.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--spark);margin-bottom:20px}
+  .btn{display:inline-flex;align-items:center;gap:9px;background:var(--blue);color:#0b1220;font-weight:700;font-size:16px;padding:15px 30px;border:0;border-radius:999px;cursor:pointer;margin-top:8px;transition:background .15s}
+  .btn:hover{background:#5aacff}
+  .form-foot{font-size:13px;color:var(--dim);margin-top:20px}
+</style>
+</head>
+<body>
+  <div class="note-bar">DESIGN SAMPLE for review &middot; questions = the set Tom approved &middot; not yet wired to send</div>
+
+  <div class="hero"><div class="wrap">
+    <div class="kick"><span class="dot"></span>FMC Affiliate Program</div>
+    <h1>Become an <em>FMC Affiliate</em></h1>
+    <p class="lede">Tell us a little about your organization and audience. We review applications quickly and reach out to approved affiliates to begin onboarding.</p>
+  </div></div>
+
+  <div class="wrap"><form onsubmit="return false">
+
+    <div class="sec-label">About you</div>
+    <div class="row">
+      <div class="grp"><label>Company / organization name <span class="req">*</span></label><input type="text" placeholder="Your organization"></div>
+      <div class="grp"><label>Website <span class="req">*</span></label><input type="url" placeholder="https://"></div>
+    </div>
+    <div class="row">
+      <div class="grp"><label>Contact name <span class="req">*</span></label><input type="text" placeholder="First and last name"></div>
+      <div class="grp"><label>Role / title <span class="req">*</span></label><input type="text" placeholder="e.g. Director of Training"></div>
+    </div>
+    <div class="grp"><label>Email <span class="req">*</span></label><input type="email" placeholder="you@company.com"></div>
+
+    <div class="divider"></div>
+    <div class="sec-label">Your audience</div>
+    <div class="grp">
+      <label>Who do you reach, and roughly how many? <span class="req">*</span></label>
+      <textarea placeholder="Describe your audience (members, subscribers, clients, event attendees...) and approximate size."></textarea>
+    </div>
+
+    <div class="divider"></div>
+    <div class="sec-label">Fit</div>
+    <div class="grp">
+      <label>Which FMC areas are you most interested in? <span class="hint">(select all that apply)</span></label>
+      <div class="chips">
+        <label class="chip"><input type="checkbox">Adobe</label>
+        <label class="chip"><input type="checkbox">Apple</label>
+        <label class="chip"><input type="checkbox">Avid</label>
+        <label class="chip"><input type="checkbox">Autodesk</label>
+        <label class="chip"><input type="checkbox">Maxon</label>
+        <label class="chip"><input type="checkbox">Blackmagic</label>
+        <label class="chip"><input type="checkbox">AI</label>
+        <label class="chip"><input type="checkbox">Conferences</label>
+      </div>
+    </div>
+    <div class="grp">
+      <label>How would you introduce FMC to your audience? <span class="hint">(select all that apply)</span></label>
+      <div class="chips">
+        <label class="chip"><input type="checkbox">Email list</label>
+        <label class="chip"><input type="checkbox">Website</label>
+        <label class="chip"><input type="checkbox">Events</label>
+        <label class="chip"><input type="checkbox">Sales team</label>
+        <label class="chip"><input type="checkbox">Social</label>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+    <div class="sec-label">References <span style="color:var(--dim);font-weight:400;text-transform:none;letter-spacing:0">(flagged for Jeff &mdash; keep on an initial application?)</span></div>
+    <div class="grp">
+      <label>Past partner references <span class="hint">(optional)</span></label>
+      <textarea placeholder="Any programs or vendors you've partnered with before."></textarea>
+    </div>
+    <div class="grp">
+      <label>Credit references <span class="hint">(optional)</span></label>
+      <textarea placeholder="Used only to determine payment terms."></textarea>
+      <div class="sub-note">Tom's ask &mdash; used to decide pay-upfront vs. net terms. Confirm with Jeff whether this belongs on the first application.</div>
+    </div>
+
+    <div class="divider"></div>
+    <div class="grp">
+      <label>Anything else you'd like us to know? <span class="hint">(optional)</span></label>
+      <textarea placeholder="Optional"></textarea>
+    </div>
+
+    <button class="btn" type="submit">Submit application &rarr;</button>
+    <p class="form-foot">This is a visual sample. Live version will send each submission to tyreep@fmctraining.com.</p>
+  </form></div>
+</body>
+</html>
