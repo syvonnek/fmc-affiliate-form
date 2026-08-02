@@ -11,7 +11,7 @@
   *{box-sizing:border-box;margin:0;padding:0}
   body{background:var(--bg);color:var(--ink);font-family:'Plus Jakarta Sans',system-ui,sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased;padding-bottom:80px}
   .note-bar{background:rgba(59,157,255,.1);border-bottom:1px solid rgba(59,157,255,.3);text-align:center;font-size:13px;color:#9fc6f5;padding:10px 16px;font-family:'JetBrains Mono',monospace;letter-spacing:.02em}
-  .hero{background:radial-gradient(ellipse 70% 60% at 25% 15%,rgba(59,157,255,.16),transparent 60%),linear-gradient(168deg,#2A2440,#1B1728 60%,#141019);padding:60px 0 46px;border-bottom:1px solid var(--rule)}
+  .hero{background:radial-gradient(ellipse 70% 60% at 25% 15%,rgba(59,157,255,.16),transparent 60%),linear-gradient(168deg,#2A2440,#1B1728 60%,#141019);padding:60px 0 46px;border-bottom:1px solid var(--rule);text-align:center}
   .wrap{max-width:760px;margin:0 auto;padding:0 28px}
   .kick{font-family:'JetBrains Mono',monospace;font-size:12.5px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--spark);display:inline-flex;align-items:center;gap:11px;margin-bottom:18px}
   .kick .dot{width:7px;height:7px;border-radius:50%;background:var(--spark)}
@@ -48,7 +48,6 @@
   <div class="note-bar">FMC Affiliate Application &middot; live form (submissions email to FMC)</div>
 
   <div class="hero"><div class="wrap">
-    <div class="kick"><span class="dot"></span>FMC Affiliate Program</div>
     <h1>Become an <em>FMC Affiliate</em></h1>
   </div></div>
 
@@ -59,7 +58,7 @@
     <input type="hidden" name="from_name" value="FMC Affiliate Page">
     <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
 
-    <div class="sec-label">About you</div>
+    <div class="sec-label">General</div>
     <div class="row">
       <div class="grp"><label>Company / organization name <span class="req">*</span></label><input type="text" name="Company / organization" placeholder="Your organization" required></div>
       <div class="grp"><label>Website <span class="req">*</span></label><input type="url" name="Website" placeholder="https://" required></div>
@@ -124,7 +123,6 @@
 
     <button class="btn" type="submit">Submit application &rarr;</button>
     <div id="msg"></div>
-    <p class="form-foot">Submissions are sent to tyreep@fmctraining.com.</p>
   </form></div>
 
 <script>
