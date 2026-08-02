@@ -39,6 +39,9 @@
   .btn{display:inline-flex;align-items:center;gap:9px;background:var(--blue);color:#0b1220;font-weight:700;font-size:16px;padding:15px 30px;border:0;border-radius:999px;cursor:pointer;margin-top:8px;transition:background .15s}
   .btn:hover{background:#5aacff}
   .form-foot{font-size:13px;color:var(--dim);margin-top:20px}
+  .site-foot{border-top:1px solid rgba(255,255,255,.1);margin-top:56px}
+  .site-foot .wrap{text-align:center;padding:44px 28px}
+  .site-foot img{height:36px;opacity:.95}
   #msg{display:none;margin-top:18px;padding:14px 18px;border-radius:11px;font-size:15px}
   #msg.ok{display:block;background:rgba(139,211,74,.12);border:1px solid rgba(139,211,74,.5);color:#cdeeb0}
   #msg.err{display:block;background:rgba(245,120,120,.12);border:1px solid rgba(245,120,120,.5);color:#f4c4c4}
@@ -124,6 +127,8 @@
     <button class="btn" type="submit">Submit application &rarr;</button>
     <div id="msg"></div>
   </form></div>
+
+  <footer class="site-foot"><div class="wrap"><img src="https://www.fmctraining.com/wp-content/uploads/2025/03/fmc_footer_white.png" alt="FMC"></div></footer>
 
 <script>
   const f=document.getElementById('affForm'), msg=document.getElementById('msg');
